@@ -8,20 +8,77 @@
 
 /* Begin PBXBuildFile section */
 		EBB962DD22A2958800E9AAED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB962DC22A2958800E9AAED /* AppDelegate.swift */; };
-		EBB962DF22A2958800E9AAED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB962DE22A2958800E9AAED /* ViewController.swift */; };
+		EBB962DF22A2958800E9AAED /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB962DE22A2958800E9AAED /* SplashView.swift */; };
 		EBB962E222A2958800E9AAED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBB962E022A2958800E9AAED /* Main.storyboard */; };
 		EBB962E422A2958900E9AAED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBB962E322A2958900E9AAED /* Assets.xcassets */; };
 		EBB962E722A2958900E9AAED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBB962E522A2958900E9AAED /* LaunchScreen.storyboard */; };
+		EBB962F922A2960800E9AAED /* SwiftHTTP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBB962F622A295FA00E9AAED /* SwiftHTTP.framework */; };
+		EBB962FA22A2960800E9AAED /* SwiftHTTP.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EBB962F622A295FA00E9AAED /* SwiftHTTP.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EBB962FF22A297F400E9AAED /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB962FE22A297F400E9AAED /* LoginViewController.swift */; };
+		EBB9630122A2B7A900E9AAED /* CodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB9630022A2B7A900E9AAED /* CodeViewController.swift */; };
+		EBB9630322A2F20400E9AAED /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB9630222A2F20400E9AAED /* AccountViewController.swift */; };
+		EBB9630522A2F5A400E9AAED /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB9630422A2F5A400E9AAED /* RegistrationViewController.swift */; };
+		EBB9630922A305BF00E9AAED /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBB9630822A305BF00E9AAED /* WebKit.framework */; };
+		EBB9630B22A3129900E9AAED /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBB9630A22A3129900E9AAED /* AVFoundation.framework */; };
+		EBB9631122A36DE200E9AAED /* SupportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB9631022A36DE200E9AAED /* SupportViewController.swift */; };
+		EBB9631322A4EB6800E9AAED /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB9631222A4EB6800E9AAED /* Reachability.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EBB962F522A295FA00E9AAED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EBB962F022A295FA00E9AAED /* SwiftHTTP.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6BFD901619C8D8B500DD99B6;
+			remoteInfo = SwiftHTTP;
+		};
+		EBB962F722A295FA00E9AAED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EBB962F022A295FA00E9AAED /* SwiftHTTP.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6BFD902119C8D8B500DD99B6;
+			remoteInfo = SwiftHTTPTests;
+		};
+		EBB962FB22A2960800E9AAED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EBB962F022A295FA00E9AAED /* SwiftHTTP.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 6BFD901519C8D8B500DD99B6;
+			remoteInfo = SwiftHTTP;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		EBB962FD22A2960800E9AAED /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				EBB962FA22A2960800E9AAED /* SwiftHTTP.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		EBB962D922A2958800E9AAED /* PhoneCheck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhoneCheck.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBB962DC22A2958800E9AAED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EBB962DE22A2958800E9AAED /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EBB962DE22A2958800E9AAED /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		EBB962E122A2958800E9AAED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EBB962E322A2958900E9AAED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EBB962E622A2958900E9AAED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EBB962E822A2958900E9AAED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EBB962F022A295FA00E9AAED /* SwiftHTTP.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftHTTP.xcodeproj; path = "SwiftHTTP-master/SwiftHTTP.xcodeproj"; sourceTree = "<group>"; };
+		EBB962FE22A297F400E9AAED /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		EBB9630022A2B7A900E9AAED /* CodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeViewController.swift; sourceTree = "<group>"; };
+		EBB9630222A2F20400E9AAED /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		EBB9630422A2F5A400E9AAED /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		EBB9630822A305BF00E9AAED /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		EBB9630A22A3129900E9AAED /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		EBB9631022A36DE200E9AAED /* SupportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportViewController.swift; sourceTree = "<group>"; };
+		EBB9631222A4EB6800E9AAED /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +86,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBB9630B22A3129900E9AAED /* AVFoundation.framework in Frameworks */,
+				EBB9630922A305BF00E9AAED /* WebKit.framework in Frameworks */,
+				EBB962F922A2960800E9AAED /* SwiftHTTP.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,8 +98,10 @@
 		EBB962D022A2958800E9AAED = {
 			isa = PBXGroup;
 			children = (
+				EBB962F022A295FA00E9AAED /* SwiftHTTP.xcodeproj */,
 				EBB962DB22A2958800E9AAED /* PhoneCheck */,
 				EBB962DA22A2958800E9AAED /* Products */,
+				EBB9630722A305BE00E9AAED /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,13 +117,37 @@
 			isa = PBXGroup;
 			children = (
 				EBB962DC22A2958800E9AAED /* AppDelegate.swift */,
-				EBB962DE22A2958800E9AAED /* ViewController.swift */,
 				EBB962E022A2958800E9AAED /* Main.storyboard */,
+				EBB962DE22A2958800E9AAED /* SplashView.swift */,
+				EBB962FE22A297F400E9AAED /* LoginViewController.swift */,
+				EBB9630022A2B7A900E9AAED /* CodeViewController.swift */,
+				EBB9631222A4EB6800E9AAED /* Reachability.swift */,
+				EBB9630222A2F20400E9AAED /* AccountViewController.swift */,
+				EBB9630422A2F5A400E9AAED /* RegistrationViewController.swift */,
+				EBB9631022A36DE200E9AAED /* SupportViewController.swift */,
 				EBB962E322A2958900E9AAED /* Assets.xcassets */,
 				EBB962E522A2958900E9AAED /* LaunchScreen.storyboard */,
 				EBB962E822A2958900E9AAED /* Info.plist */,
 			);
 			path = PhoneCheck;
+			sourceTree = "<group>";
+		};
+		EBB962F122A295FA00E9AAED /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EBB962F622A295FA00E9AAED /* SwiftHTTP.framework */,
+				EBB962F822A295FA00E9AAED /* SwiftHTTPTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EBB9630722A305BE00E9AAED /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EBB9630A22A3129900E9AAED /* AVFoundation.framework */,
+				EBB9630822A305BF00E9AAED /* WebKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,10 +160,12 @@
 				EBB962D522A2958800E9AAED /* Sources */,
 				EBB962D622A2958800E9AAED /* Frameworks */,
 				EBB962D722A2958800E9AAED /* Resources */,
+				EBB962FD22A2960800E9AAED /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				EBB962FC22A2960800E9AAED /* PBXTargetDependency */,
 			);
 			name = PhoneCheck;
 			productName = PhoneCheck;
@@ -110,12 +198,35 @@
 			mainGroup = EBB962D022A2958800E9AAED;
 			productRefGroup = EBB962DA22A2958800E9AAED /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = EBB962F122A295FA00E9AAED /* Products */;
+					ProjectRef = EBB962F022A295FA00E9AAED /* SwiftHTTP.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				EBB962D822A2958800E9AAED /* PhoneCheck */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		EBB962F622A295FA00E9AAED /* SwiftHTTP.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SwiftHTTP.framework;
+			remoteRef = EBB962F522A295FA00E9AAED /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		EBB962F822A295FA00E9AAED /* SwiftHTTPTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = SwiftHTTPTests.xctest;
+			remoteRef = EBB962F722A295FA00E9AAED /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		EBB962D722A2958800E9AAED /* Resources */ = {
@@ -135,12 +246,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EBB962DF22A2958800E9AAED /* ViewController.swift in Sources */,
+				EBB9630522A2F5A400E9AAED /* RegistrationViewController.swift in Sources */,
+				EBB962FF22A297F400E9AAED /* LoginViewController.swift in Sources */,
+				EBB9631122A36DE200E9AAED /* SupportViewController.swift in Sources */,
+				EBB9630322A2F20400E9AAED /* AccountViewController.swift in Sources */,
+				EBB9630122A2B7A900E9AAED /* CodeViewController.swift in Sources */,
+				EBB962DF22A2958800E9AAED /* SplashView.swift in Sources */,
+				EBB9631322A4EB6800E9AAED /* Reachability.swift in Sources */,
 				EBB962DD22A2958800E9AAED /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EBB962FC22A2960800E9AAED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftHTTP;
+			targetProxy = EBB962FB22A2960800E9AAED /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		EBB962E022A2958800E9AAED /* Main.storyboard */ = {
@@ -281,34 +406,40 @@
 		EBB962EC22A2958A00E9AAED /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2PTSPBS2JZ;
 				INFOPLIST_FILE = PhoneCheck/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = AXAS.PhoneCheck;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		EBB962ED22A2958A00E9AAED /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2PTSPBS2JZ;
 				INFOPLIST_FILE = PhoneCheck/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = AXAS.PhoneCheck;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

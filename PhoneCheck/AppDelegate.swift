@@ -16,6 +16,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        // USER DATA
+        if (UserDefaults.standard.value(forKey: "secretCode") == nil){
+            UserDefaults.standard.set("https://findguest.actid.ru/api/v1/", forKey: "API")
+            UserDefaults.standard.set("", forKey: "secretCode")
+            UserDefaults.standard.set("", forKey: "lastUpdate")
+            UserDefaults.standard.set("", forKey: "userName")
+            UserDefaults.standard.set("", forKey: "guestCount")
+            UserDefaults.standard.set("ProjectName", forKey: "projectName")
+            UserDefaults.standard.set("Lorem Lorem", forKey: "projectNameSubtitle")
+        }
+        
+        
         return true
     }
 
