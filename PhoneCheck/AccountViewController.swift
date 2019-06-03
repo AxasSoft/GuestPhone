@@ -49,6 +49,7 @@ class AccountViewController: UIViewController {
         let okAction = UIAlertAction(title: "ДА", style: .default , handler: { (action) in
             UserDefaults.standard.set("", forKey: "secretCode")
             UserDefaults.standard.set("", forKey: "lastUpdate")
+             self.writeFileForCallDirectory(numbers: [], labels: [])
             self.performSegue(withIdentifier: "accountToSplashSegue", sender: self)
         })
         let noAction = UIAlertAction(title: "НЕТ", style: .default , handler: nil)
