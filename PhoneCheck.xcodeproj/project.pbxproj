@@ -3,10 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EB84002522A528C100156991 /* CallDirectoryHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB84002422A528C100156991 /* CallDirectoryHandler.swift */; };
+		EB84002922A528C100156991 /* AxasCallExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = EB84002222A528C100156991 /* AxasCallExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		EB84003222A5317700156991 /* LineReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB84003122A5317700156991 /* LineReader.swift */; };
 		EBB962DD22A2958800E9AAED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB962DC22A2958800E9AAED /* AppDelegate.swift */; };
 		EBB962DF22A2958800E9AAED /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB962DE22A2958800E9AAED /* SplashView.swift */; };
 		EBB962E222A2958800E9AAED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBB962E022A2958800E9AAED /* Main.storyboard */; };
@@ -25,6 +28,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		EB84002722A528C100156991 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EBB962D122A2958800E9AAED /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EB84002122A528C100156991;
+			remoteInfo = AxasCallExtension;
+		};
 		EBB962F522A295FA00E9AAED /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EBB962F022A295FA00E9AAED /* SwiftHTTP.xcodeproj */;
@@ -49,6 +59,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		EB84002E22A528C100156991 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				EB84002922A528C100156991 /* AxasCallExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EBB962FD22A2960800E9AAED /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -63,6 +84,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		EB84002222A528C100156991 /* AxasCallExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = AxasCallExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB84002422A528C100156991 /* CallDirectoryHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallDirectoryHandler.swift; sourceTree = "<group>"; };
+		EB84002622A528C100156991 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EB84002F22A528E800156991 /* PhoneCheck.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PhoneCheck.entitlements; sourceTree = "<group>"; };
+		EB84003022A528FA00156991 /* AxasCallExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AxasCallExtension.entitlements; sourceTree = "<group>"; };
+		EB84003122A5317700156991 /* LineReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineReader.swift; sourceTree = "<group>"; };
 		EBB962D922A2958800E9AAED /* PhoneCheck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhoneCheck.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBB962DC22A2958800E9AAED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EBB962DE22A2958800E9AAED /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
@@ -82,6 +109,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		EB84001F22A528C100156991 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EBB962D622A2958800E9AAED /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -95,11 +129,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EB84002322A528C100156991 /* AxasCallExtension */ = {
+			isa = PBXGroup;
+			children = (
+				EB84003022A528FA00156991 /* AxasCallExtension.entitlements */,
+				EB84002422A528C100156991 /* CallDirectoryHandler.swift */,
+				EB84002622A528C100156991 /* Info.plist */,
+			);
+			path = AxasCallExtension;
+			sourceTree = "<group>";
+		};
 		EBB962D022A2958800E9AAED = {
 			isa = PBXGroup;
 			children = (
 				EBB962F022A295FA00E9AAED /* SwiftHTTP.xcodeproj */,
 				EBB962DB22A2958800E9AAED /* PhoneCheck */,
+				EB84002322A528C100156991 /* AxasCallExtension */,
 				EBB962DA22A2958800E9AAED /* Products */,
 				EBB9630722A305BE00E9AAED /* Frameworks */,
 			);
@@ -109,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				EBB962D922A2958800E9AAED /* PhoneCheck.app */,
+				EB84002222A528C100156991 /* AxasCallExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -116,6 +162,7 @@
 		EBB962DB22A2958800E9AAED /* PhoneCheck */ = {
 			isa = PBXGroup;
 			children = (
+				EB84002F22A528E800156991 /* PhoneCheck.entitlements */,
 				EBB962DC22A2958800E9AAED /* AppDelegate.swift */,
 				EBB962E022A2958800E9AAED /* Main.storyboard */,
 				EBB962DE22A2958800E9AAED /* SplashView.swift */,
@@ -128,6 +175,7 @@
 				EBB962E322A2958900E9AAED /* Assets.xcassets */,
 				EBB962E522A2958900E9AAED /* LaunchScreen.storyboard */,
 				EBB962E822A2958900E9AAED /* Info.plist */,
+				EB84003122A5317700156991 /* LineReader.swift */,
 			);
 			path = PhoneCheck;
 			sourceTree = "<group>";
@@ -153,6 +201,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		EB84002122A528C100156991 /* AxasCallExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EB84002D22A528C100156991 /* Build configuration list for PBXNativeTarget "AxasCallExtension" */;
+			buildPhases = (
+				EB84001E22A528C100156991 /* Sources */,
+				EB84001F22A528C100156991 /* Frameworks */,
+				EB84002022A528C100156991 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AxasCallExtension;
+			productName = AxasCallExtension;
+			productReference = EB84002222A528C100156991 /* AxasCallExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		EBB962D822A2958800E9AAED /* PhoneCheck */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = EBB962EB22A2958A00E9AAED /* Build configuration list for PBXNativeTarget "PhoneCheck" */;
@@ -161,11 +226,13 @@
 				EBB962D622A2958800E9AAED /* Frameworks */,
 				EBB962D722A2958800E9AAED /* Resources */,
 				EBB962FD22A2960800E9AAED /* Embed Frameworks */,
+				EB84002E22A528C100156991 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				EBB962FC22A2960800E9AAED /* PBXTargetDependency */,
+				EB84002822A528C100156991 /* PBXTargetDependency */,
 			);
 			name = PhoneCheck;
 			productName = PhoneCheck;
@@ -180,15 +247,32 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1020;
 				LastUpgradeCheck = 1020;
-				ORGANIZATIONNAME = "Сергей Майбродский";
+				ORGANIZATIONNAME = axas;
 				TargetAttributes = {
+					EB84002122A528C100156991 = {
+						CreatedOnToolsVersion = 10.2.1;
+						DevelopmentTeam = 2PTSPBS2JZ;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
 					EBB962D822A2958800E9AAED = {
 						CreatedOnToolsVersion = 10.2.1;
+						DevelopmentTeam = 2PTSPBS2JZ;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
 			buildConfigurationList = EBB962D422A2958800E9AAED /* Build configuration list for PBXProject "PhoneCheck" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -207,6 +291,7 @@
 			projectRoot = "";
 			targets = (
 				EBB962D822A2958800E9AAED /* PhoneCheck */,
+				EB84002122A528C100156991 /* AxasCallExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -229,6 +314,13 @@
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
+		EB84002022A528C100156991 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EBB962D722A2958800E9AAED /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -242,6 +334,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		EB84001E22A528C100156991 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB84002522A528C100156991 /* CallDirectoryHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EBB962D522A2958800E9AAED /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -250,6 +350,7 @@
 				EBB962FF22A297F400E9AAED /* LoginViewController.swift in Sources */,
 				EBB9631122A36DE200E9AAED /* SupportViewController.swift in Sources */,
 				EBB9630322A2F20400E9AAED /* AccountViewController.swift in Sources */,
+				EB84003222A5317700156991 /* LineReader.swift in Sources */,
 				EBB9630122A2B7A900E9AAED /* CodeViewController.swift in Sources */,
 				EBB962DF22A2958800E9AAED /* SplashView.swift in Sources */,
 				EBB9631322A4EB6800E9AAED /* Reachability.swift in Sources */,
@@ -260,6 +361,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		EB84002822A528C100156991 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EB84002122A528C100156991 /* AxasCallExtension */;
+			targetProxy = EB84002722A528C100156991 /* PBXContainerItemProxy */;
+		};
 		EBB962FC22A2960800E9AAED /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SwiftHTTP;
@@ -287,6 +393,42 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		EB84002A22A528C100156991 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CODE_SIGN_ENTITLEMENTS = AxasCallExtension/AxasCallExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2PTSPBS2JZ;
+				INFOPLIST_FILE = AxasCallExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = AXAS.PhoneCheck.AxasCallExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		EB84002B22A528C100156991 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CODE_SIGN_ENTITLEMENTS = AxasCallExtension/AxasCallExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2PTSPBS2JZ;
+				INFOPLIST_FILE = AxasCallExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = AXAS.PhoneCheck.AxasCallExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
 		EBB962E922A2958900E9AAED /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -397,8 +539,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -408,14 +549,12 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PhoneCheck/PhoneCheck.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2PTSPBS2JZ;
 				INFOPLIST_FILE = PhoneCheck/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = AXAS.PhoneCheck;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -428,14 +567,12 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PhoneCheck/PhoneCheck.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2PTSPBS2JZ;
 				INFOPLIST_FILE = PhoneCheck/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = AXAS.PhoneCheck;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -446,6 +583,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		EB84002D22A528C100156991 /* Build configuration list for PBXNativeTarget "AxasCallExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EB84002A22A528C100156991 /* Debug */,
+				EB84002B22A528C100156991 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		EBB962D422A2958800E9AAED /* Build configuration list for PBXProject "PhoneCheck" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

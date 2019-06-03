@@ -29,7 +29,7 @@ class SplashView: UIViewController {
     }
     
     func startApp(){
-        // проверяем приложение на первый запуск
+        // go to next controller
         DispatchQueue.main.async {
             if UserDefaults.standard.value(forKey: "secretCode") as! String == ""{
                 self.spinner.stopAnimating()

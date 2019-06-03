@@ -104,7 +104,6 @@ class CodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDelega
             
             if metadataObj.stringValue != nil {
                 // if qr is detected
-                print(metadataObj.stringValue as Any)
                 self.codeTextField.text = metadataObj.stringValue
             }
         }
@@ -123,7 +122,6 @@ class CodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDelega
         
         // check textField
         secretCode = codeTextField.text!
-        print("code is \(secretCode)")
         
         //check code
         guard secretCode != "" else {
@@ -145,11 +143,9 @@ class CodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDelega
             return
         }
         
-        
-        print("\(UserDefaults.standard.value(forKey: "API") as! String)auth/")
         // send get request
         HTTP.GET("\(UserDefaults.standard.value(forKey: "API") as! String)auth/", parameters: ["auth": secretCode]) { response in
-            print(response)
+
             if let err = response.error {
                 print("error: \(err.localizedDescription)")
                 // show alert
@@ -189,15 +185,6 @@ class CodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDelega
         }
     }
     
-    // переход на новый контроллер
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        // go to account controller
-//        if segue.identifier == "codeToAccountSegue" {
-//            let destinationVC = segue.destination as! AccountViewController
-//            destinationVC.secretCode = self.secretCode
-//        }
-//    }
-//    
     // hide keyboard
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)

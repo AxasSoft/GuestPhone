@@ -8,6 +8,8 @@
 
 import UIKit
 import SwiftHTTP
+import CallKit
+
 class AccountViewController: UIViewController {
 
     @IBOutlet weak var companyNameLabel: UILabel!
@@ -39,6 +41,8 @@ class AccountViewController: UIViewController {
         exitButton.layer.cornerRadius = 16
         
         getGuestNumbers()
+        
+        
     }
     @IBAction func goExitButton(_ sender: Any) {
         let alertController = UIAlertController(title: "Внимание", message: "Вы действительно хотите выйти? Все данные аккаунта будут удалены!", preferredStyle: .alert)
@@ -103,11 +107,9 @@ class AccountViewController: UIViewController {
             return
         }
         
-        
-        print("\(UserDefaults.standard.value(forKey: "API") as! String)get_contacts/")
+
         // send get request
         HTTP.GET("\(UserDefaults.standard.value(forKey: "API") as! String)get_contacts/", parameters: ["auth": secretCode]) { response in
-            print(response)
             if let err = response.error {
                 print("error: \(err.localizedDescription)")
                 // show alert
@@ -127,13 +129,12 @@ class AccountViewController: UIViewController {
                 DispatchQueue.main.async {
                     self.userInfo = json["info"] as! Dictionary<String, Any>
                     self.clientsData = json["data"] as! Dictionary<String, Any>
-                    
-                    print(self.userInfo)
-                    print(self.clientsData)
-                    
+
                     //go to account controller
                     self.setClientData()
                     self.spinner.stopAnimating()
+                    
+                    self.writeFileForCallDirectory(numbers: self.clientsData["phones"] as! [String], labels: self.clientsData["names"] as! [String])
                 }
             } catch {
                 // sgow alert
@@ -156,4 +157,23 @@ class AccountViewController: UIViewController {
         let someDateTime = formatter.string(from: currentDateTime)
         return String(someDateTime)
     }
+    
+    
+    //write number for identification CXCALLMANAGER
+    func writeFileForCallDirectory(numbers: [String], labels: [String]) {
+
+        guard let fileUrl = FileManager.default
+            .containerURL(forSecurityApplicationGroupIdentifier: "group.ru.AXAS.PhoneCheck")?
+            .appendingPathComponent("contacts") else { return }
+
+        var string = ""
+        for (number, label) in zip(numbers, labels) {
+            string += "\(number.suffix(11)),\(label)\n"
+        }
+        
+        try? string.write(to: fileUrl, atomically: true, encoding: .utf8)
+
+        CXCallDirectoryManager.sharedInstance.reloadExtension(withIdentifier: "AXAS.PhoneCheck.AxasCallExtension")
+    }
 }
+
