@@ -105,9 +105,11 @@ class CodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDelega
             let barCodeObject = video.transformedMetadataObject(for: metadataObj)
             qrCodeFrameView?.frame = barCodeObject!.bounds
             
-            if metadataObj.stringValue != nil {
+            if metadataObj.stringValue != nil && self.codeTextField.text != metadataObj.stringValue {
                 // if qr is detected
                 self.codeTextField.text = metadataObj.stringValue
+                
+                getGuestNumbers()
             }
         }
     }
