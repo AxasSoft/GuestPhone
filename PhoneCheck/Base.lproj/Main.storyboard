@@ -49,7 +49,59 @@
                     <view key="view" contentMode="scaleToFill" id="3K8-Zg-1ZC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Разработано в студии AXAS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SFc-su-Ua4">
+                                <rect key="frame" x="94.5" y="153" width="225" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Czy-zc-p3e">
+                                <rect key="frame" x="144.5" y="472" width="125" height="30"/>
+                                <state key="normal" title="+7(918)416-71-61"/>
+                                <connections>
+                                    <action selector="callToDev:" destination="0Q4-xr-S2F" eventType="touchUpInside" id="trM-hQ-za0"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Version 1.0.1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fYC-HQ-Eaa">
+                                <rect key="frame" x="169.5" y="776" width="75" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0up-ua-eyq">
+                                <rect key="frame" x="154.5" y="532" width="105" height="30"/>
+                                <state key="normal" title="admin@axas.ru"/>
+                                <connections>
+                                    <action selector="sendLetterToDev:" destination="0Q4-xr-S2F" eventType="touchUpInside" id="4g4-Yo-358"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1gh-Lt-VeG">
+                                <rect key="frame" x="80.5" y="197" width="253" height="253"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="253" id="G0d-ZV-Xeb"/>
+                                    <constraint firstAttribute="width" constant="253" id="PGm-ov-4e0"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="Big_blue_1000_rect"/>
+                                <connections>
+                                    <action selector="goWebsite:" destination="0Q4-xr-S2F" eventType="touchUpInside" id="TR3-gD-0hH"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="SFc-su-Ua4" firstAttribute="centerX" secondItem="eNS-2f-xmT" secondAttribute="centerX" id="1Q1-MW-gkx"/>
+                            <constraint firstItem="1gh-Lt-VeG" firstAttribute="top" secondItem="SFc-su-Ua4" secondAttribute="bottom" constant="23" id="6Wa-ah-Gb6"/>
+                            <constraint firstItem="SFc-su-Ua4" firstAttribute="top" secondItem="eNS-2f-xmT" secondAttribute="top" constant="97" id="A39-cs-S5X"/>
+                            <constraint firstItem="fYC-HQ-Eaa" firstAttribute="centerX" secondItem="eNS-2f-xmT" secondAttribute="centerX" id="Xbh-jQ-Kpu"/>
+                            <constraint firstItem="0up-ua-eyq" firstAttribute="centerX" secondItem="eNS-2f-xmT" secondAttribute="centerX" id="Y0s-1g-Tnf"/>
+                            <constraint firstItem="eNS-2f-xmT" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="SFc-su-Ua4" secondAttribute="trailing" symbolic="YES" id="aR5-18-v2A"/>
+                            <constraint firstItem="Czy-zc-p3e" firstAttribute="centerX" secondItem="eNS-2f-xmT" secondAttribute="centerX" id="epu-xV-gY6"/>
+                            <constraint firstItem="0up-ua-eyq" firstAttribute="top" secondItem="Czy-zc-p3e" secondAttribute="bottom" constant="30" id="h4h-pM-x9f"/>
+                            <constraint firstItem="1gh-Lt-VeG" firstAttribute="centerX" secondItem="eNS-2f-xmT" secondAttribute="centerX" id="iEa-9p-Uvj"/>
+                            <constraint firstItem="eNS-2f-xmT" firstAttribute="bottom" secondItem="fYC-HQ-Eaa" secondAttribute="bottom" constant="16" id="nrP-Gm-z4g"/>
+                            <constraint firstItem="Czy-zc-p3e" firstAttribute="top" secondItem="1gh-Lt-VeG" secondAttribute="bottom" constant="22" id="w1Z-Nl-Gix"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="eNS-2f-xmT"/>
                     </view>
                     <navigationItem key="navigationItem" title="Поддержка" id="ljZ-yK-QTo">
@@ -161,6 +213,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Big_blue_1000_rect" width="1000" height="1000"/>
         <image name="Icon-512" width="512" height="512"/>
         <image name="ic_back_arrow" width="11.5" height="18"/>
     </resources>

@@ -70,11 +70,8 @@ class AccountViewController: UIViewController {
         
         //check internet connection
         guard Reachability.isConnectedToNetwork() == true  else {
-            let alertController = UIAlertController(title: "Ошибка", message: "Проверьте подключение к сети Интернет", preferredStyle: .alert)
-            let okAction = UIAlertAction(title: "ОК", style: .default , handler: nil)
-            alertController.addAction(okAction)
             self.spinner.stopAnimating()
-            self.present(alertController, animated: true, completion: nil)
+            showOKAlert()
             return
         }
         
@@ -85,11 +82,8 @@ class AccountViewController: UIViewController {
                 print("error: \(err.localizedDescription)")
                 // show alert
                 DispatchQueue.main.async {
-                    let alertController = UIAlertController(title: "Ошибка", message: "Проверьте введенные данные и подключение к сети Интернет.", preferredStyle: .alert)
-                    let okAction = UIAlertAction(title: "ОК", style: .default , handler: nil)
-                    alertController.addAction(okAction)
                     self.spinner.stopAnimating()
-                    self.present(alertController, animated: true, completion: nil)
+                    self.showOKAlert()
                 }
                 return
             }
@@ -110,11 +104,8 @@ class AccountViewController: UIViewController {
             } catch {
                 // sgow alert
                 DispatchQueue.main.async {
-                    let alertController = UIAlertController(title: "Ошибка", message: "Некорректный код. Проверьте данные и повторите попытку.", preferredStyle: .alert)
-                    let okAction = UIAlertAction(title: "ОК", style: .default , handler: nil)
-                    alertController.addAction(okAction)
                     self.spinner.stopAnimating()
-                    self.present(alertController, animated: true, completion: nil)
+                    self.showOKAlert()
                 }
             }
         }

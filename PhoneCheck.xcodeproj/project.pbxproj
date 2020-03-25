@@ -10,6 +10,7 @@
 		EB84003222A5317700156991 /* LineReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB84003122A5317700156991 /* LineReader.swift */; };
 		EB9F3721242B9AF0009FDDB5 /* CallDirectoryHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9F3720242B9AF0009FDDB5 /* CallDirectoryHandler.swift */; };
 		EB9F3725242B9AF0009FDDB5 /* CallAX.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = EB9F371E242B9AF0009FDDB5 /* CallAX.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		EB9F372B242BB208009FDDB5 /* ShowALert.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9F372A242BB208009FDDB5 /* ShowALert.swift */; };
 		EBB962DD22A2958800E9AAED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB962DC22A2958800E9AAED /* AppDelegate.swift */; };
 		EBB962DF22A2958800E9AAED /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB962DE22A2958800E9AAED /* SplashView.swift */; };
 		EBB962E222A2958800E9AAED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBB962E022A2958800E9AAED /* Main.storyboard */; };
@@ -87,7 +88,8 @@
 		EB9F3720242B9AF0009FDDB5 /* CallDirectoryHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallDirectoryHandler.swift; sourceTree = "<group>"; };
 		EB9F3722242B9AF0009FDDB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB9F3729242BA14C009FDDB5 /* CallAX.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CallAX.entitlements; sourceTree = "<group>"; };
-		EBB962D922A2958800E9AAED /* PhoneCheck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhoneCheck.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB9F372A242BB208009FDDB5 /* ShowALert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowALert.swift; sourceTree = "<group>"; };
+		EBB962D922A2958800E9AAED /* AX Contacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AX Contacts.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBB962DC22A2958800E9AAED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EBB962DE22A2958800E9AAED /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		EBB962E122A2958800E9AAED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -147,7 +149,7 @@
 		EBB962DA22A2958800E9AAED /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				EBB962D922A2958800E9AAED /* PhoneCheck.app */,
+				EBB962D922A2958800E9AAED /* AX Contacts.app */,
 				EB9F371E242B9AF0009FDDB5 /* CallAX.appex */,
 			);
 			name = Products;
@@ -161,6 +163,7 @@
 				EBB962E022A2958800E9AAED /* Main.storyboard */,
 				EBB962DE22A2958800E9AAED /* SplashView.swift */,
 				EBB9631222A4EB6800E9AAED /* Reachability.swift */,
+				EB9F372A242BB208009FDDB5 /* ShowALert.swift */,
 				EBB9630222A2F20400E9AAED /* AccountViewController.swift */,
 				EBB9631022A36DE200E9AAED /* SupportViewController.swift */,
 				EBB962E322A2958900E9AAED /* Assets.xcassets */,
@@ -227,7 +230,7 @@
 			);
 			name = PhoneCheck;
 			productName = PhoneCheck;
-			productReference = EBB962D922A2958800E9AAED /* PhoneCheck.app */;
+			productReference = EBB962D922A2958800E9AAED /* AX Contacts.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -336,6 +339,7 @@
 				EBB9631122A36DE200E9AAED /* SupportViewController.swift in Sources */,
 				EBB9630322A2F20400E9AAED /* AccountViewController.swift in Sources */,
 				EB84003222A5317700156991 /* LineReader.swift in Sources */,
+				EB9F372B242BB208009FDDB5 /* ShowALert.swift in Sources */,
 				EBB962DF22A2958800E9AAED /* SplashView.swift in Sources */,
 				EBB9631322A4EB6800E9AAED /* Reachability.swift in Sources */,
 				EBB962DD22A2958800E9AAED /* AppDelegate.swift in Sources */,
@@ -540,7 +544,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = AXAS.PhoneCheck;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "AX Contacts";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -558,7 +562,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = AXAS.PhoneCheck;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "AX Contacts";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
