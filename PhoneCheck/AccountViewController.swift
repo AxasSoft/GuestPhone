@@ -12,12 +12,9 @@ import CallKit
 
 class AccountViewController: UIViewController {
 
-    @IBOutlet weak var companyNameLabel: UILabel!
     @IBOutlet weak var numberCountLabel: UILabel!
     @IBOutlet weak var lastUpdateLabel: UILabel!
-    @IBOutlet weak var exitButton: UIButton!
     
-    let secretCode = UserDefaults.standard.value(forKey: "secretCode") as! String
     
     var userInfo : Dictionary<String, Any> = [:]
     var clientsData : Dictionary<String, Any> = [:]
@@ -32,37 +29,17 @@ class AccountViewController: UIViewController {
         spinner.hidesWhenStopped = true
         
         // set data to label
-        companyNameLabel.text = (UserDefaults.standard.value(forKey: "userName") as! String)
         numberCountLabel.text = (UserDefaults.standard.value(forKey: "guestCount") as! String)
         //set last update
         lastUpdateLabel.text = (UserDefaults.standard.value(forKey: "lastUpdate") as! String)
-        
-        //add border radius for exit button
-        exitButton.layer.cornerRadius = 16
         
         getGuestNumbers()
         
         
     }
-    @IBAction func goExitButton(_ sender: Any) {
-        let alertController = UIAlertController(title: "Внимание", message: "Вы действительно хотите выйти? Все данные аккаунта будут удалены!", preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "ДА", style: .default , handler: { (action) in
-            UserDefaults.standard.set("", forKey: "secretCode")
-            UserDefaults.standard.set("", forKey: "lastUpdate")
-             self.writeFileForCallDirectory(numbers: [], labels: [])
-            self.performSegue(withIdentifier: "accountToSplashSegue", sender: self)
-        })
-        let noAction = UIAlertAction(title: "НЕТ", style: .default , handler: nil)
-        alertController.addAction(okAction)
-        alertController.addAction(noAction)
-        self.present(alertController, animated: true, completion: nil)
-        return
-    }
-    
+
     func setClientData(){
         // set data to label
-        companyNameLabel.text = (userInfo["name"] as! String)
-        UserDefaults.standard.set((userInfo["name"] as! String), forKey: "userName")
         
         var numbersName = "номеров"
         if (userInfo["contacts_count"] as! Int % 10 == 1){
@@ -74,29 +51,22 @@ class AccountViewController: UIViewController {
         UserDefaults.standard.set("В базе хранится \(userInfo["contacts_count"] as! Int) \(numbersName)", forKey: "guestCount")
         
         //set last update
-        var thisDate = getDay().split(separator: " ")
+        let thisDate = getDay().split(separator: " ")
         let lastUpdate = "Последнее обновление - \(thisDate[0]) в \(thisDate[1])"
         lastUpdateLabel.text = lastUpdate
         UserDefaults.standard.set(lastUpdate, forKey: "lastUpdate")
     }
+    
+    @IBAction func reload(_ sender: Any){
+           getGuestNumbers()
+       }
     
     
     // GET GUEST NUMBERS
     func getGuestNumbers() {
         //start spinner
         spinner.startAnimating()
-        
-        //check code
-        guard secretCode != "" else {
-            let alertController = UIAlertController(title: "Ошибка", message: "Некорректный код. Пожалуйста попробуйте снова!", preferredStyle: .alert)
-            let okAction = UIAlertAction(title: "ОК", style: .default , handler: { (action) in
-                self.performSegue(withIdentifier: "accountToSplashSegue", sender: self)
-            })
-            alertController.addAction(okAction)
-            self.spinner.stopAnimating()
-            self.present(alertController, animated: true, completion: nil)
-            return
-        }
+
         
         //check internet connection
         guard Reachability.isConnectedToNetwork() == true  else {
@@ -110,7 +80,7 @@ class AccountViewController: UIViewController {
         
 
         // send get request
-        HTTP.GET("\(UserDefaults.standard.value(forKey: "API") as! String)get_contacts/", parameters: ["auth": secretCode]) { response in
+        HTTP.GET("\(UserDefaults.standard.value(forKey: "API") as! String)get_contacts.php") { response in
             if let err = response.error {
                 print("error: \(err.localizedDescription)")
                 // show alert
@@ -158,23 +128,37 @@ class AccountViewController: UIViewController {
         let someDateTime = formatter.string(from: currentDateTime)
         return String(someDateTime)
     }
-    
+   
     
     //write number for identification CXCALLMANAGER
     func writeFileForCallDirectory(numbers: [String], labels: [String]) {
 
         guard let fileUrl = FileManager.default
-            .containerURL(forSecurityApplicationGroupIdentifier: "group.ru.AXAS.PhoneCheck")?
+            .containerURL(forSecurityApplicationGroupIdentifier: "group.AXAS.PhoneCheck")?
             .appendingPathComponent("contacts") else { return }
 
         var string = ""
+        
+        var contacts:[String: String] = [:]
         for (number, label) in zip(numbers, labels) {
+            contacts[number] = label
+        }
+        print(contacts)
+        
+        // работает только с отсортированным массивом
+        
+        for (number, label) in (Array(contacts).sorted {$0 < $1}) {
             string += "\(number.suffix(11)),\(label)\n"
         }
         
         try? string.write(to: fileUrl, atomically: true, encoding: .utf8)
 
-        CXCallDirectoryManager.sharedInstance.reloadExtension(withIdentifier: "AXAS.PhoneCheck.AxasCallExtension")
+
+        CXCallDirectoryManager.sharedInstance.reloadExtension(withIdentifier: "AXAS.PhoneCheck.CallAX", completionHandler: { (error) in
+            if let error = error {
+                print("Error reloading extension: \(error.localizedDescription)")
+            }
+        })
     }
 }
 

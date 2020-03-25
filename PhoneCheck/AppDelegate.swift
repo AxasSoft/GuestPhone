@@ -18,14 +18,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         // USER DATA
-        if (UserDefaults.standard.value(forKey: "secretCode") == nil){
-            UserDefaults.standard.set("https://findguest.actid.ru/api/v1/", forKey: "API")
-            UserDefaults.standard.set("", forKey: "secretCode")
+        if (UserDefaults.standard.value(forKey: "lastUpdate") == nil){
+            UserDefaults.standard.set("http://call.quadrotoys.ru/call/", forKey: "API")
             UserDefaults.standard.set("", forKey: "lastUpdate")
-            UserDefaults.standard.set("", forKey: "userName")
             UserDefaults.standard.set("", forKey: "guestCount")
-            UserDefaults.standard.set("ProjectName", forKey: "projectName")
-            UserDefaults.standard.set("Lorem Lorem", forKey: "projectNameSubtitle")
         }
         
         

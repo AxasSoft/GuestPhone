@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EB84002522A528C100156991 /* CallDirectoryHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB84002422A528C100156991 /* CallDirectoryHandler.swift */; };
-		EB84002922A528C100156991 /* AxasCallExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = EB84002222A528C100156991 /* AxasCallExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		EB84003222A5317700156991 /* LineReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB84003122A5317700156991 /* LineReader.swift */; };
+		EB9F3721242B9AF0009FDDB5 /* CallDirectoryHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9F3720242B9AF0009FDDB5 /* CallDirectoryHandler.swift */; };
+		EB9F3725242B9AF0009FDDB5 /* CallAX.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = EB9F371E242B9AF0009FDDB5 /* CallAX.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		EBB962DD22A2958800E9AAED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB962DC22A2958800E9AAED /* AppDelegate.swift */; };
 		EBB962DF22A2958800E9AAED /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB962DE22A2958800E9AAED /* SplashView.swift */; };
 		EBB962E222A2958800E9AAED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBB962E022A2958800E9AAED /* Main.storyboard */; };
@@ -17,10 +17,7 @@
 		EBB962E722A2958900E9AAED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBB962E522A2958900E9AAED /* LaunchScreen.storyboard */; };
 		EBB962F922A2960800E9AAED /* SwiftHTTP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBB962F622A295FA00E9AAED /* SwiftHTTP.framework */; };
 		EBB962FA22A2960800E9AAED /* SwiftHTTP.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EBB962F622A295FA00E9AAED /* SwiftHTTP.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		EBB962FF22A297F400E9AAED /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB962FE22A297F400E9AAED /* LoginViewController.swift */; };
-		EBB9630122A2B7A900E9AAED /* CodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB9630022A2B7A900E9AAED /* CodeViewController.swift */; };
 		EBB9630322A2F20400E9AAED /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB9630222A2F20400E9AAED /* AccountViewController.swift */; };
-		EBB9630522A2F5A400E9AAED /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB9630422A2F5A400E9AAED /* RegistrationViewController.swift */; };
 		EBB9630922A305BF00E9AAED /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBB9630822A305BF00E9AAED /* WebKit.framework */; };
 		EBB9630B22A3129900E9AAED /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBB9630A22A3129900E9AAED /* AVFoundation.framework */; };
 		EBB9631122A36DE200E9AAED /* SupportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB9631022A36DE200E9AAED /* SupportViewController.swift */; };
@@ -28,12 +25,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		EB84002722A528C100156991 /* PBXContainerItemProxy */ = {
+		EB9F3723242B9AF0009FDDB5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EBB962D122A2958800E9AAED /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = EB84002122A528C100156991;
-			remoteInfo = AxasCallExtension;
+			remoteGlobalIDString = EB9F371D242B9AF0009FDDB5;
+			remoteInfo = CallAX;
 		};
 		EBB962F522A295FA00E9AAED /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -65,7 +62,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				EB84002922A528C100156991 /* AxasCallExtension.appex in Embed App Extensions */,
+				EB9F3725242B9AF0009FDDB5 /* CallAX.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -84,12 +81,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		EB84002222A528C100156991 /* AxasCallExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = AxasCallExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
-		EB84002422A528C100156991 /* CallDirectoryHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallDirectoryHandler.swift; sourceTree = "<group>"; };
-		EB84002622A528C100156991 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB84002F22A528E800156991 /* PhoneCheck.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PhoneCheck.entitlements; sourceTree = "<group>"; };
-		EB84003022A528FA00156991 /* AxasCallExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AxasCallExtension.entitlements; sourceTree = "<group>"; };
 		EB84003122A5317700156991 /* LineReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineReader.swift; sourceTree = "<group>"; };
+		EB9F371E242B9AF0009FDDB5 /* CallAX.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = CallAX.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB9F3720242B9AF0009FDDB5 /* CallDirectoryHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallDirectoryHandler.swift; sourceTree = "<group>"; };
+		EB9F3722242B9AF0009FDDB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EB9F3729242BA14C009FDDB5 /* CallAX.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CallAX.entitlements; sourceTree = "<group>"; };
 		EBB962D922A2958800E9AAED /* PhoneCheck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhoneCheck.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBB962DC22A2958800E9AAED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EBB962DE22A2958800E9AAED /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
@@ -98,10 +95,7 @@
 		EBB962E622A2958900E9AAED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EBB962E822A2958900E9AAED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EBB962F022A295FA00E9AAED /* SwiftHTTP.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftHTTP.xcodeproj; path = "SwiftHTTP-master/SwiftHTTP.xcodeproj"; sourceTree = "<group>"; };
-		EBB962FE22A297F400E9AAED /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		EBB9630022A2B7A900E9AAED /* CodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeViewController.swift; sourceTree = "<group>"; };
 		EBB9630222A2F20400E9AAED /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
-		EBB9630422A2F5A400E9AAED /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		EBB9630822A305BF00E9AAED /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		EBB9630A22A3129900E9AAED /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		EBB9631022A36DE200E9AAED /* SupportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportViewController.swift; sourceTree = "<group>"; };
@@ -109,7 +103,7 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		EB84001F22A528C100156991 /* Frameworks */ = {
+		EB9F371B242B9AF0009FDDB5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -129,14 +123,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		EB84002322A528C100156991 /* AxasCallExtension */ = {
+		EB9F371F242B9AF0009FDDB5 /* CallAX */ = {
 			isa = PBXGroup;
 			children = (
-				EB84003022A528FA00156991 /* AxasCallExtension.entitlements */,
-				EB84002422A528C100156991 /* CallDirectoryHandler.swift */,
-				EB84002622A528C100156991 /* Info.plist */,
+				EB9F3729242BA14C009FDDB5 /* CallAX.entitlements */,
+				EB9F3720242B9AF0009FDDB5 /* CallDirectoryHandler.swift */,
+				EB9F3722242B9AF0009FDDB5 /* Info.plist */,
 			);
-			path = AxasCallExtension;
+			path = CallAX;
 			sourceTree = "<group>";
 		};
 		EBB962D022A2958800E9AAED = {
@@ -144,7 +138,7 @@
 			children = (
 				EBB962F022A295FA00E9AAED /* SwiftHTTP.xcodeproj */,
 				EBB962DB22A2958800E9AAED /* PhoneCheck */,
-				EB84002322A528C100156991 /* AxasCallExtension */,
+				EB9F371F242B9AF0009FDDB5 /* CallAX */,
 				EBB962DA22A2958800E9AAED /* Products */,
 				EBB9630722A305BE00E9AAED /* Frameworks */,
 			);
@@ -154,7 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				EBB962D922A2958800E9AAED /* PhoneCheck.app */,
-				EB84002222A528C100156991 /* AxasCallExtension.appex */,
+				EB9F371E242B9AF0009FDDB5 /* CallAX.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -166,11 +160,8 @@
 				EBB962DC22A2958800E9AAED /* AppDelegate.swift */,
 				EBB962E022A2958800E9AAED /* Main.storyboard */,
 				EBB962DE22A2958800E9AAED /* SplashView.swift */,
-				EBB962FE22A297F400E9AAED /* LoginViewController.swift */,
-				EBB9630022A2B7A900E9AAED /* CodeViewController.swift */,
 				EBB9631222A4EB6800E9AAED /* Reachability.swift */,
 				EBB9630222A2F20400E9AAED /* AccountViewController.swift */,
-				EBB9630422A2F5A400E9AAED /* RegistrationViewController.swift */,
 				EBB9631022A36DE200E9AAED /* SupportViewController.swift */,
 				EBB962E322A2958900E9AAED /* Assets.xcassets */,
 				EBB962E522A2958900E9AAED /* LaunchScreen.storyboard */,
@@ -201,21 +192,21 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		EB84002122A528C100156991 /* AxasCallExtension */ = {
+		EB9F371D242B9AF0009FDDB5 /* CallAX */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EB84002D22A528C100156991 /* Build configuration list for PBXNativeTarget "AxasCallExtension" */;
+			buildConfigurationList = EB9F3726242B9AF0009FDDB5 /* Build configuration list for PBXNativeTarget "CallAX" */;
 			buildPhases = (
-				EB84001E22A528C100156991 /* Sources */,
-				EB84001F22A528C100156991 /* Frameworks */,
-				EB84002022A528C100156991 /* Resources */,
+				EB9F371A242B9AF0009FDDB5 /* Sources */,
+				EB9F371B242B9AF0009FDDB5 /* Frameworks */,
+				EB9F371C242B9AF0009FDDB5 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = AxasCallExtension;
-			productName = AxasCallExtension;
-			productReference = EB84002222A528C100156991 /* AxasCallExtension.appex */;
+			name = CallAX;
+			productName = CallAX;
+			productReference = EB9F371E242B9AF0009FDDB5 /* CallAX.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 		EBB962D822A2958800E9AAED /* PhoneCheck */ = {
@@ -232,7 +223,7 @@
 			);
 			dependencies = (
 				EBB962FC22A2960800E9AAED /* PBXTargetDependency */,
-				EB84002822A528C100156991 /* PBXTargetDependency */,
+				EB9F3724242B9AF0009FDDB5 /* PBXTargetDependency */,
 			);
 			name = PhoneCheck;
 			productName = PhoneCheck;
@@ -245,23 +236,19 @@
 		EBB962D122A2958800E9AAED /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1020;
-				LastUpgradeCheck = 1020;
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = axas;
 				TargetAttributes = {
-					EB84002122A528C100156991 = {
-						CreatedOnToolsVersion = 10.2.1;
+					EB9F371D242B9AF0009FDDB5 = {
+						CreatedOnToolsVersion = 11.3.1;
 						DevelopmentTeam = 2PTSPBS2JZ;
 						ProvisioningStyle = Automatic;
-						SystemCapabilities = {
-							com.apple.ApplicationGroups.iOS = {
-								enabled = 1;
-							};
-						};
 					};
 					EBB962D822A2958800E9AAED = {
 						CreatedOnToolsVersion = 10.2.1;
 						DevelopmentTeam = 2PTSPBS2JZ;
+						LastSwiftMigration = 1130;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
@@ -291,7 +278,7 @@
 			projectRoot = "";
 			targets = (
 				EBB962D822A2958800E9AAED /* PhoneCheck */,
-				EB84002122A528C100156991 /* AxasCallExtension */,
+				EB9F371D242B9AF0009FDDB5 /* CallAX */,
 			);
 		};
 /* End PBXProject section */
@@ -314,7 +301,7 @@
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
-		EB84002022A528C100156991 /* Resources */ = {
+		EB9F371C242B9AF0009FDDB5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -334,11 +321,11 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		EB84001E22A528C100156991 /* Sources */ = {
+		EB9F371A242B9AF0009FDDB5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EB84002522A528C100156991 /* CallDirectoryHandler.swift in Sources */,
+				EB9F3721242B9AF0009FDDB5 /* CallDirectoryHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,12 +333,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EBB9630522A2F5A400E9AAED /* RegistrationViewController.swift in Sources */,
-				EBB962FF22A297F400E9AAED /* LoginViewController.swift in Sources */,
 				EBB9631122A36DE200E9AAED /* SupportViewController.swift in Sources */,
 				EBB9630322A2F20400E9AAED /* AccountViewController.swift in Sources */,
 				EB84003222A5317700156991 /* LineReader.swift in Sources */,
-				EBB9630122A2B7A900E9AAED /* CodeViewController.swift in Sources */,
 				EBB962DF22A2958800E9AAED /* SplashView.swift in Sources */,
 				EBB9631322A4EB6800E9AAED /* Reachability.swift in Sources */,
 				EBB962DD22A2958800E9AAED /* AppDelegate.swift in Sources */,
@@ -361,10 +345,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		EB84002822A528C100156991 /* PBXTargetDependency */ = {
+		EB9F3724242B9AF0009FDDB5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = EB84002122A528C100156991 /* AxasCallExtension */;
-			targetProxy = EB84002722A528C100156991 /* PBXContainerItemProxy */;
+			target = EB9F371D242B9AF0009FDDB5 /* CallAX */;
+			targetProxy = EB9F3723242B9AF0009FDDB5 /* PBXContainerItemProxy */;
 		};
 		EBB962FC22A2960800E9AAED /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -393,38 +377,38 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		EB84002A22A528C100156991 /* Debug */ = {
+		EB9F3727242B9AF0009FDDB5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CODE_SIGN_ENTITLEMENTS = AxasCallExtension/AxasCallExtension.entitlements;
+				CODE_SIGN_ENTITLEMENTS = CallAX/CallAX.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2PTSPBS2JZ;
-				INFOPLIST_FILE = AxasCallExtension/Info.plist;
+				INFOPLIST_FILE = CallAX/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = AXAS.PhoneCheck.AxasCallExtension;
+				PRODUCT_BUNDLE_IDENTIFIER = AXAS.PhoneCheck.CallAX;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
-		EB84002B22A528C100156991 /* Release */ = {
+		EB9F3728242B9AF0009FDDB5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CODE_SIGN_ENTITLEMENTS = AxasCallExtension/AxasCallExtension.entitlements;
+				CODE_SIGN_ENTITLEMENTS = CallAX/CallAX.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2PTSPBS2JZ;
-				INFOPLIST_FILE = AxasCallExtension/Info.plist;
+				INFOPLIST_FILE = CallAX/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = AXAS.PhoneCheck.AxasCallExtension;
+				PRODUCT_BUNDLE_IDENTIFIER = AXAS.PhoneCheck.CallAX;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
@@ -480,7 +464,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -535,7 +519,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -557,7 +541,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = AXAS.PhoneCheck;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -575,7 +559,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = AXAS.PhoneCheck;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
@@ -583,11 +567,11 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		EB84002D22A528C100156991 /* Build configuration list for PBXNativeTarget "AxasCallExtension" */ = {
+		EB9F3726242B9AF0009FDDB5 /* Build configuration list for PBXNativeTarget "CallAX" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				EB84002A22A528C100156991 /* Debug */,
-				EB84002B22A528C100156991 /* Release */,
+				EB9F3727242B9AF0009FDDB5 /* Debug */,
+				EB9F3728242B9AF0009FDDB5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

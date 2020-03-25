@@ -170,7 +170,7 @@
 				TargetAttributes = {
 					6BFD901519C8D8B500DD99B6 = {
 						CreatedOnToolsVersion = 6.0;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 1130;
 					};
 					6BFD902019C8D8B500DD99B6 = {
 						CreatedOnToolsVersion = 6.0;
@@ -182,6 +182,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 6BFD900C19C8D8B500DD99B6;
@@ -377,7 +378,7 @@
 				SUPPORTED_PLATFORMS = "macosx watchos appletvos appletvsimulator iphoneos iphonesimulator watchsimulator";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2,3,4";
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 				VALID_ARCHS = "i386 x86_64 arm64 armv7s armv7 armv7k";
@@ -406,7 +407,7 @@
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "macosx watchos appletvos appletvsimulator iphoneos iphonesimulator watchsimulator";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2,3,4";
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 				VALID_ARCHS = "i386 x86_64 arm64 armv7s armv7 armv7k";
